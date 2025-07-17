@@ -1,3 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap');
+
 body {
       background-color: rgb(63, 117, 117);
     }
+html, body {
+    margin: 0;
+    padding: 0%;
+    }
+header {
+    text-align: center;
+    background-color: rgb(23, 22, 51);
+    padding: 20px;
+    }
+header img{
+    width: 300px;
+    height: 260px;
+    border: 20px solid rgb(255, 255, 255);
+    border-radius: 100%
+    }
+header h1 {
+  font-weight: bold;
+  font-family: "Londrina Shadow", sans-serif;
+  font-weight: 0;
+  font-style: normal;
+  margin: 10px 0 20px 0;
+  color: rgb(255, 255, 255);
+    }
+
+  
