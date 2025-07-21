@@ -26,5 +26,30 @@ header h1 {
   margin: 10px 0 20px 0;
   color: rgb(255, 255, 255);
     }
+header h1 {
+  font-weight: bold;
+  font-family: "Londrina Shadow", sans-serif;
+  font-weight: 0;
+  font-style: normal;
+  margin: 10px 0 20px 0;
+  color: rgb(255, 255, 255);
+    }
+    
+  .magic-btn {
+  background: linear-gradient(to right, #d67c58, #ff76d6);
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  color: white;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
 
   
