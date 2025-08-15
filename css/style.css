@@ -1,18 +1,21 @@
 
 
-html, body {
-    margin: 0;
-    padding: 0%;
-    }
+/* Reset default margins and box-sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 header {
-    div { 
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+header div {
 background-image: url("sunsetpic.png");
   background-size: cover;       /* Scales the image to cover the whole screen */
   background-position: center;  /* Centers the image */
   background-repeat: no-repeat; /* Prevents repeating the image */
-
-} 
-    padding: 0px;
     }
 header img{
     width: 1577px;
@@ -36,134 +39,126 @@ header h1 {
   text-align: center;
 }
 
-/* === MAIN SECTION === */
+/* Sections */
+body {
+  background-color: black;
+ }
 .intro, .part2, .part3, .part4 {
-  flex-wrap: wrap; /* allows wrapping on small screens */
-  flex-wrap: nowrap; /* prevents the image from going under the text */
-}
-
-/* === INTRO SECTION === */
-
-.intro img {
-   position: absolute;
-   padding-left: 80px;
-   padding-top: 80px;
-   max-width: 300px; /* Resmin maksimum genişliği */
-    height: auto; /* Oranları koruyarak yüksekliği otomatik ayarlayın */
-  flex-shrink: 0; /* prevents the image from shrinking too much */
-}
-.intro p {
   display: flex;
-  justify-content: center;   /* center horizontally */
-  align-items: center;       /* center vertically */
-  flex-direction: column; /* This stacks items vertically */
-  padding-top: 200px;
-  font-size: 30px;
+  align-items: center; /* Vertically center */
+  justify-content: space-between; /* Space out image and text */
+  flex-wrap: wrap; /* Allow wrapping */
+  gap: 1.25rem; /* Space between image and text */
+  padding: 2rem;
+  max-width: 75rem; /* 1200px */
   margin: 0 auto;
-  text-align: center;
-  width: 700px;
-  min-width: 700px; /* allows the text to shrink inside flex container */
 }
 
-/* === PART2 SECTION === */
-
-.part2 img {
-  position: absolute;
-  padding-top: 100px;
-  padding-left: 1200px;
-  max-width: 300px;
-  max-height: 200px;
-  flex-shrink: 0; /* prevents the image from shrinking too much */
-}
-.part2 p {
-  display: flex;
-  justify-content: center;   /* center horizontally */
-  align-items: center;       /* center vertically */
-  flex-direction: column; /* This stacks items vertically */
-  padding-top: 150px;
-  font-size: 30px;
-  margin: 0 auto;
-  text-align: center;
-  width: 700px;
-  min-width: 700px; /* allows the text to shrink inside flex container */
+/* Text styling */
+.intro p, .part2 p, .part3 p, .part4 p {
+  flex: 1;
+  font-size: 2rem;
+  text-align:center;
+  color: rgb(255, 166, 0);
+  min-width: 17.5rem; /* 280px */
 }
 
-/* === PART3 SECTION === */
-
-.part3 p {
-  display: flex;
-  justify-content: center;   /* center horizontally */
-  align-items: center;       /* center vertically */
-  flex-direction: column; /* This stacks items vertically */
-  padding-top: 0px;
-  font-size: 30px;
-  margin: 0 auto;
-  text-align: center;
-  width: 700px;
-  min-width: 700px; /* allows the text to shrink inside flex container */
+/* Image styling */
+.intro img, .part2 img, .part3 img, .part4 img {
+  max-width: 18.75rem; /* 300px */
+  width: 30%;
+  height: auto;
+  flex-shrink: 0;
 }
 
-/* === PART4 SECTION === */
-.part4 img {
-  position: absolute;
-  padding-top: 200px;
-  padding-left: 1200px;
-  max-width: 300px;
-  max-height: 200px;
-  flex-shrink: 0; /* prevents the image from shrinking too much */
-}
- 
-.part4 p {
-  display: flex;
-  justify-content: center;   /* center horizontally */
-  align-items: center;       /* center vertically */
-  flex-direction: column; /* This stacks items vertically */
-  padding-top: 150px;
-  font-size: 30px;
-  margin: 0 auto;
-  text-align: center;
-  width: 700px;
-  min-width: 700px; /* allows the text to shrink inside flex container */
+/* Reverse order for part2 and part4 (text left, image right) */
+.part2, .part4 {
+  flex-direction: row-reverse;
 }
 
 
-
-
-
+/* Footer */
 footer {
- margin: 20px;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Segoe UI', sans-serif;
-    }
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 1rem;
+}
 
-    .magic-btn {
-      background: linear-gradient(to top, #1a58b6);
-      border: none;
-      padding: 30px 60px;
-      font-size: 2rem;
-      border-radius: 20px;
-      cursor: pointer;
-      animation: pulse 2s infinite;
-      color: rgb(0, 0, 0);
-      text-shadow: 2px 2px 6px rgba(255, 0, 149, 0.6);  /* Makes text readable */
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
+.magic-btn {
+  background: linear-gradient(to top, #1a58b6);
+  border: none;
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  border-radius: 1.25rem;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  color: rgb(0, 0, 0);
+  text-shadow: 2px 2px 6px rgba(255, 0, 149, 0.6);
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
 
-    .magic-btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-    }
+.magic-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.75rem 1.5625rem rgba(0, 0, 0, 0.3);
+}
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.04); }
-      100% { transform: scale(1); }
-    }
-    
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
 
-  
+/* Mobile adjustments (tablets and below) */
+@media (max-width: 48rem) { /* 768px */
+  header h1 {
+    font-size: 2.5rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .intro, .part2, .part3, .part4 {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .intro p, .part2 p, .part3 p, .part4 p {
+    font-size: 1.2rem;
+    text-align: center;
+    min-width: 100%;
+  }
+
+  .intro img, .part2 img, .part3 img, .part4 img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  footer {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .magic-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* Extra small screens (phones below 480px) */
+@media (max-width: 30rem) { /* 480px */
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .intro p, .part2 p, .part3 p, .part4 p {
+    font-size: 1rem;
+  }
+
+  .magic-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
